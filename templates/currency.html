@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form method= 'post'>
+            <label for="currency">Wybierz walutę:</label>
+            <select name=currency id=currency>
+                {% for item in items %}
+                <option value={{item}}>{{item}}</option>
+                {% endfor %}
+            </select>
+            <input type="value" placeholder="Wprowadź wartość" name="value" required>
+            <button type="submit">Przelicz</button>
+        </form>
+    </body>
+</html>
